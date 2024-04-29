@@ -19,7 +19,7 @@ import utilities.Log;
 
 public class ExcelReader {
 	
-	public List<Map<String, String>> ReadExcelFile(String sheetName)
+	/*public List<Map<String, String>> ReadExcelFile(String sheetName)
 	{
 		List<Map<String, String>> sheetData = null;
 		try
@@ -37,7 +37,7 @@ public class ExcelReader {
 		
 		return sheetData;
 	}
-	
+	*/
 	private List<Map<String, String>> ReadSheet(Sheet sheet) 
 	{
 		Row row;

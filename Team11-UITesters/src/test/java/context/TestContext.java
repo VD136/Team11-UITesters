@@ -1,18 +1,21 @@
 package context;
 
+
 import managers.*;
+import utilities.Helper;
 
 public class TestContext 
 {
 	private DriverManager webDriverManager;
 	private PageObjectManager pageObjectManager;
-	public ScenarioContext scenarioContext;
+	private Helper helper;
 	
 	public TestContext()
 	{
 		webDriverManager = new DriverManager();
 		pageObjectManager = new PageObjectManager(webDriverManager.getDriver());
-		scenarioContext = new ScenarioContext();
+		helper = new Helper(webDriverManager.getDriver());
+	
 	}
 	
 	public DriverManager getWebDriverManager() {
@@ -23,8 +26,8 @@ public class TestContext
 		return pageObjectManager;
 	}
 	
-	public ScenarioContext getScenarioContext() {
-		return scenarioContext;
+	public Helper getHelper() {
+		return helper;
 	}
 
 }
