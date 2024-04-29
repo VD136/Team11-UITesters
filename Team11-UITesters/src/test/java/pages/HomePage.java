@@ -14,7 +14,12 @@ public class HomePage {
 
 	WebDriver driver;
 	
-	@FindBy(xpath = "//a[@href='/login']") WebElement loginBtn;
+	//@FindBy(xpath = "//a[@href='/login']") WebElement loginBtn;
+	//@FindBy(id="username") WebElement Uname;
+	//@FindBy(id="password") WebElement password;
+	By Uname = By.id("username");
+	By Passwrd = By.id("password");
+	By Loginbtn = By.id("login");
 		
 	public HomePage(WebDriver driver)
 	{
@@ -33,6 +38,14 @@ public class HomePage {
 		Assert.assertEquals(driver.getCurrentUrl(), FileReaderManager.getInstance().getConfigReader().getHomePageUrl());
 		Log.info("Verifies that user is on Home Page");
 		return null;
+	}
+	
+	public void Logindetails()
+	{
+		driver.findElement(Uname).sendKeys("sdetorganizers@gmail.com"); 
+		driver.findElement(Passwrd).sendKeys("UIHackathon@02");
+		driver.findElement(Loginbtn).click();
+		Log.info("User clicked on Sign in");
 	}
 	
 	/*public void VerifyNotSignedIn()

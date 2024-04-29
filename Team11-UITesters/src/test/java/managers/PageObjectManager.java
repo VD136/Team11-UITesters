@@ -12,6 +12,10 @@ public class PageObjectManager {
 	private HomePage homePage;
 	//private LandingPage landingPage;
 	private SignInPage signinPage;
+	private BatchPageValidation batchPageValidation;
+	private AddBatchPage addBatchPage;
+	private DeleteBatchPage deleteBatchPage;
+	private EditBatchPage editBatchPage;
 	//private RegisterPage registerPage;
 	//private EditorPage editorPage;
 	//private PracticePage practicePage;
@@ -54,6 +58,24 @@ public class PageObjectManager {
 		return (signinPage == null) ? signinPage = new SignInPage(driver) : signinPage;
 	}
 	
+	public BatchPageValidation getBatchPageValidation()
+	{
+		return (batchPageValidation == null) ? batchPageValidation = new BatchPageValidation(driver) : batchPageValidation;
+	}
+	
+	public AddBatchPage getAddBatchPage()
+	{
+		return (addBatchPage == null) ? addBatchPage = new AddBatchPage(driver) : addBatchPage;
+	}
+	
+	public DeleteBatchPage getDeleteBatchPage()
+	{
+		return (deleteBatchPage == null) ? deleteBatchPage = new DeleteBatchPage(driver) : deleteBatchPage;
+	}
+	public EditBatchPage getEditBatchPage()
+	{
+		return (editBatchPage == null) ? editBatchPage = new EditBatchPage(driver) : editBatchPage;
+	}
 	/*public EditorPage getEditorPage()
 	{
 		return (editorPage == null) ? editorPage = new EditorPage(driver) : editorPage;

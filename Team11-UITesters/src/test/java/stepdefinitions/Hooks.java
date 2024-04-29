@@ -36,13 +36,13 @@ public class Hooks {
 		
 	}
 	
-	@After
-    public static void tearDown(Scenario scenario) {
- 
-        if(scenario.isFailed()) {
-            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", scenario.getName()); 
-        }  
-    }
+//	@After
+//    public static void tearDown(Scenario scenario) {
+// 
+//        if(scenario.isFailed()) {
+//            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//            scenario.attach(screenshot, "image/png", scenario.getName()); 
+//        }  
+//    }
 
 }

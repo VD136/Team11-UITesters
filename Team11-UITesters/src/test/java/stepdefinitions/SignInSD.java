@@ -46,12 +46,17 @@ public class SignInSD {
 	public void user_gets_title_of_the_page() {
 		homePage.GoToHomePage();
 	}
-
-	@Then("appUrl Page Title should be {string}")
+ 
+/*	@Then("appUrl Page Title should be {string}")
 	public void app_url_page_title_should_be(String string) {
-		String Title = homePage.VerifyHomePageURL();
+		String Title = homePage.Logindetails();
 		//Loggerload.info("Title of current page is ***** " + Title + " ****");
 		Assert.assertEquals(Title, "LMS", "Title do not match");
+	}*/
+	@Then("login using uname password")
+	public void login_using_uname_password() {
+	    // Write code here that turns the phrase above into concrete actions
+	    homePage.Logindetails();
 	}
 	
 }
